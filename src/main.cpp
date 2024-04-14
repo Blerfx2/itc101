@@ -21,10 +21,11 @@ int main() {
             }
         } else if (buttons_get(2)) {
             while (buttons_get(2)) {
-                light_all_lights(255, 255, 0);
+                light_all_lights(13, 0, 80);
                 leds_set_brightness(get_brightness());
                 if (check_switches()) {
                     speaker_play_note(NOTE_D4, 10);
+                    speaker_play_note(NOTE_C4, 20);
                 }
             }
         } else if (buttons_get(3)) {
@@ -32,11 +33,11 @@ int main() {
                 light_all_lights(0, 255, 0);
                 leds_set_brightness(get_brightness());
                 if (check_switches()) {
-                    speaker_play_note(NOTE_E4, 10);
+                    speaker_play_note(NOTE_A3, 35);
                 }
             }
         } else {
-            light_all_lights(255, 255, 255);
+            light_all_lights(55, 55, 55);
             leds_set_brightness(get_brightness());
         }
     }

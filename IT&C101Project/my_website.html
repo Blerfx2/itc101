@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+
+        <title>Self-Introduction Website</title>
+        <style>
+            body {
+  background-color: rgb(166, 221, 240); 
+
+}
+
+
+h1 {
+  color: rgb(11, 135, 14);
+  text-align: center;
+  font-size: 50px;
+}
+h2 {
+  color: rgb(5, 0, 0);
+  text-align: left;
+  font-size: 30px;
+}
+p {
+  color: rgb(5, 0, 0);
+  text-align: left;
+  font-size: 40px;
+}
+h4 {
+  color: rgb(5, 0, 0);
+  text-align: left;
+  font-size: 30px;
+}
+h5 {
+  color: rgb(5, 0, 0);
+  text-align: left;
+  font-size: 30px;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+        </style>
+    </head>
+    <body>
+        <img src="/Users/bruceweygandt/Desktop/IMG_1378.png" alt="Girl in a jacket" style="width:500px;height:600px;">
+        <h1><b style="font-family:impact">From the Other Side of the World</b><h1>
+        <p style="font-family:Times New Roman">Hi, my name is Bruce and I am from <u>Osaka, Japan</u>.  I was born in <u>Portland, Oregon</u> and lived in <u>North Carolina</u> and Osaka. I lived in Osaka nost of my life so I will consider it my home.  I'm just enjoying the BYU experience and am studying Cybersecurity.<p>
+        <h2 style="font-family:comic sans ms">Interests<h2><br>
+        <ul>
+            <li>Basketball</li>
+            <li>Free weights</li>
+            <li>Yoga</li>
+            <li>Japanese culture (<em>especially <a href="file:///Users/bruceweygandt/Documents/IT&C101/Fianl_project/%3C!DOCTYPE%20html%3E.html"> Osaka</a>)</em></li>
+            <li>Music</li>
+            <li>Food</li>
+        </ul>
+        <h4 style="font-family:comic sans ms">Family<h4>
+        <ul>
+            <li>Father</li>
+            <li>Mom</li>
+            <li>Older sister</li>
+            <li>Older brother</li>
+            <li>Me!</li>
+        </ul>
+        <p><a href="mailto:brucebasketball2024@gmail.com">Send email for more information about Osaka and/or Japan!</a></p>
+        <p><script>document.write(new Date().toLocaleString())</script></p>
+        <div id="txt"></div>
+
+        <script>
+        function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+        }
+        </script>
+    </body>
+</html>

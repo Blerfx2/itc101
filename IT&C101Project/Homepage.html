@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h1 {
+        color:black;
+        text-align: center;
+        font-size: xx-large;
+    }
+    h2 {
+        font-size: x-large;
+    }
+    html {
+       background-color: lightblue; 
+
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-size: large;
+    }
+    iframe {
+        width: 60%;
+        height: 300px;
+    }
+</style>
+<head>
+    <title>Project Homepage</title>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="Homepage.css">
+    <h1>Welcome to the Ben and Bruce Semester Project!!</h1>
+    <h2><em>Table of Contents</em></h2>
+    <table>
+        <tr>
+            <td></td>
+            <td>About Page</td>
+            <td>Interesting Fact</td>
+        </tr>
+        <tr>
+            <td>Ben</td>
+            <td><a href="BenMoodyPage.html" target="_blank">Benjamin Moody</a></td>
+            <td><a href="RPGPage.html" target="_blank">RPG's</a></td>
+        </tr>
+        <tr>
+            <td>Bruce</td>
+            <td><a href="Bruce.html" target="_blank">Bruce Weygandt</a></td>
+            <td><a href="Osaka.html" target="_blank">Osaka</a></td>
+        </tr>
+    </table>
+    <h2><em>Who is the Best?</em></h2>
+    <div>
+        <input type="radio" name="choice" value="Good choice! He's pretty cool" id="1">
+        <label for="1">Ben is the best!</label>
+    </div>
+    <div>
+        <input type="radio" name="choice" value="Good choice! He worked really hard on this project!" id="2">
+        <label for="2">Bruce is the best!</label>
+    </div>
+    <div>
+        <input type="radio" name="choice" value="Hey now, I'm sensing a little bias" id="3">
+        <label for="3">TA's are the best</label>
+    </div>
+    <div>
+        <input type="radio" name="choice" value="Wow, that's really rude. Your should think about your actions" id="4">
+        <label for="4">These guys are kinda the worst</label>
+    </div>
+    <p>
+        <button id="btn">Cast your vote</button>
+    </p>
+
+    <p id="output"></p>
+    <script>
+        const btn = document.querySelector('#btn');        
+        const radioButtons = document.querySelectorAll('input[name="choice"]');
+        btn.addEventListener("click", () => {
+            let selectedSize;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selectedSize = radioButton.value;
+                    break;
+                }
+            }
+            output.innerText = selectedSize ? `${selectedSize}` : `You haven't selected any option silly`;
+        });
+</script>
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vR15K0cz25Z3pagFLBnntTw8a1HqZBD6HF8BW8iJXzUS1o27_K7-rkOn0010bXmgAiNx3r1aj7WhlN5/pub?embedded=true"></iframe>
+</body>
